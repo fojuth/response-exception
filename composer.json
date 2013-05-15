@@ -1,6 +1,7 @@
 {
     "name": "desmart/response-exception",
     "description": "Response exception for Laravel4",
+    "license": "MIT",
     "authors": [
         {
             "name": "Radoslaw Mejer",
