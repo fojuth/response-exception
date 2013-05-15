@@ -40,7 +40,7 @@ That's not the best design (exceptions aren't for that!), but it works and gives
 This package is useless for *standard* Laravel applications. 
 Probably it fit's best with [desmart/laravel-layout](https://github.com/DeSmart/laravel-layout) since it's a wicked controller.
 
-Also in some edge cases it can be used for situation when some part of application **needs** to send own response during controller dispatch.
+Also in some edge cases it can be used for situations when some part of application **needs** to send own response during controller dispatch.
 
 ## Examples
 
@@ -53,7 +53,7 @@ ResponseException::make('foo'); // sends 'foo' response
 ResponseException::chain(Redirect::to('/'))
   ->withInput()
   ->fire();
-``
+```
 
 ## The hack
 
