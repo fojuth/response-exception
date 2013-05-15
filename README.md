@@ -35,6 +35,26 @@ The only way to return a response which will overwrite the *big part* is throwin
 
 That's not the best design (exceptions aren't for that!), but it works and gives a chance to generate complete response from the smallest part of application.
 
+## Use cases
+
+This package is useless for *standard* Laravel applications. 
+Probably it fit's best with [desmart/laravel-layout](https://github.com/DeSmart/laravel-layout) since it's a wicked controller.
+
+Also in some edge cases it can be used for situation when some part of application **needs** to send own response during controller dispatch.
+
+## Examples
+
+```php
+use DeSmart\ResponseException\Exception as ResponseException;
+
+ResponseException::make('foo'); // sends 'foo' response
+
+// There's an option to make chained exceptions
+ResponseException::chain(Redirect::to('/'))
+  ->withInput()
+  ->fire();
+``
+
 ## The hack
 
 In Laravel response may by returned in many parts of request cycle:
