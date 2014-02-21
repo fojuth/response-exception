@@ -4,12 +4,12 @@ Response exception for Laravel4 is.. exception which returns response.
 
 ## Install notes
 
-Add `desmart/laravel-layout` as a requirement to composer.json:
+Add `desmart/response-exception` as a requirement to composer.json:
 
 ```json
 {
   "require": {
-    "desmart/response-exception": "1.0.*"
+    "desmart/response-exception": "1.1.*"
   }
 }
 ```
